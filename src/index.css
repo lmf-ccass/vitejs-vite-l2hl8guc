@@ -1,0 +1,35 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0; color: #d8f3ff; font-family: system-ui, sans-serif;
+  background: radial-gradient(circle at 20% 0%, #0f3a4a 0%, #050b14 60%) fixed;
+}
+.app { max-width: 1400px; margin: auto; padding: 16px; }
+header { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; align-items: center; }
+h1 { margin: 0; font-size: 22px; text-shadow: 0 0 12px #3cf; }
+main { display: grid; grid-template-columns: 300px 1fr; gap: 16px; margin-top: 16px; }
+.glass {
+  background: rgba(255,255,255,.06); border: 1px solid rgba(120,220,255,.25);
+  border-radius: 14px; backdrop-filter: blur(10px); padding: 14px;
+  box-shadow: 0 0 20px rgba(0,200,255,.08) inset, 0 8px 30px rgba(0,0,0,.4);
+}
+.branches { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.branch { display: flex; flex-direction: column; gap: 12px; }
+.card canvas, .card img { width: 100%; border-radius: 10px; margin-top: 8px; }
+.row { display: flex; gap: 8px; align-items: center; }
+.row.wrap { flex-wrap: wrap; margin-bottom: 8px; }
+button, select, input[type=password] {
+  background: #0c2a3a; color: #bff; border: 1px solid #3cf6; border-radius: 8px; padding: 6px 10px; cursor: pointer;
+}
+button:hover { box-shadow: 0 0 10px #3cf8; }
+.chip { font-size: 12px; }
+.badge { background: #3cf2; border: 1px solid #3cf; padding: 4px 10px; border-radius: 20px; font-family: monospace; }
+.slider { display: block; margin: 10px 0; font-size: 13px; }
+.slider span { display: flex; justify-content: space-between; }
+.slider b { color: #5ff; font-family: monospace; }
+.slider input { width: 100%; accent-color: #3cf; }
+.bar { display: grid; grid-template-columns: 70px 1fr; gap: 8px; font-size: 12px; margin: 3px 0; }
+.bar div { background: #0006; border-radius: 4px; height: 8px; margin-top: 4px; }
+.bar i { display: block; height: 100%; border-radius: 4px; background: linear-gradient(90deg,#0ff,#7f7); box-shadow: 0 0 8px #0ff8; }
+textarea { width: 100%; margin: 8px 0; background: #0006; color: #9cc; border: 1px solid #3cf4; border-radius: 8px; font-size: 11px; }
+.err { color: #f88; font-size: 12px; }
+@media (max-width: 900px) { main, .branches { grid-template-columns: 1fr; } }
